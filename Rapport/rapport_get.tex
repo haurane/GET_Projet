@@ -9,7 +9,15 @@
 \usepackage{pageGarde/HEIG_STY}
 \usepackage[hidelinks]{hyperref}
 \usepackage{lipsum}
+\usepackage{fancyhdr} % En tetes / bas de page
 \newcommand{\tde}{Transfusion d'Éternité}
+
+%marge des pages
+\setlength{\textwidth}{16cm}
+\setlength{\textheight}{24cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\voffset}{-1.5cm}
+\setlength{\headheight}{15pt}
 
 \title{Projet de Gestion d'Entreprise}
 \subtitle{\tde{}}
@@ -20,7 +28,15 @@
 \date{\today}
 \prof{Destine au Prof. Dider Gern}
 
+%en-tête
+\lhead{Groupe hypocras}
+\chead{Laboratoire ordonnanceur}
+\rhead{\theAcro}
 
+%pied-de-page
+\lfoot{HEIG-VD}
+\cfoot{\today}
+\rfoot{\thepage}
 
 \begin{document}
 \maketitle
