@@ -12,6 +12,7 @@
 \usepackage{fancyhdr} % En tetes / bas de page
 \usepackage{siunitx} % needs texlive-science package on debian
 \usepackage{tabularx}
+\usepackage{pdfpages}
 \newcommand{\tde}{Transfusion d'Éternité}
  
 %marge des pages
@@ -112,17 +113,68 @@ Cette carte au logo de l'entreprise est imprimé automatiquement dans les lieux 
 Une autre possibilité est la commande sur le site avec possibilité de retrait de la marchandise chez un revendeur agréé.
 En lieu d'un envoi matériel, le client à la possibilité d'imprimer un bon de retrait avec contrôle numérique éfféctué par le revendeur.
 \section{Brevets}
-%scan ok
-\section{Depot de Marque}
-%integerer .doc
+\tde{} a breveté une machine permettant d'automatiser le processus de fabrication.
+Il s'agit d'un mixeur/plaque chauffante avec divers compartiment qui ajoute à la base de vin les ingrédiants nécessaires à la production de l'hypocras.
+Les pages suivantes contiennent le dépot du brevet.
+
+\includepdf[pages={1,2}]{../Annexe/requete_brevet.pdf}
+\section{Dépot de Marque}
+\tde{} est une marque enregistrée au sens du droit suisse.
+La marque consiste en un nom et un logo déposé.
+Les pages suivantes contiennent la demande de dépot de la marque.
+
+\includepdf[pages={1-3}]{../Annexe/depot.pdf}
 \section{Processus}
 
 \subsection{Fabrication}
+Le processus de fabrication implique l'entreprise et le(s) fournisseur(s) de matières premières.
+La fabrication est relativement simple, seule une période de maturation d'un mois doit être réspecté pour garantir la qualité du produit.
+Cette pause rends la production sur commande impossible, \tde{} doit donc garantir posséder les stocks nécessaires à l'execution de sa mission.
 
+Le processus est décrit en détails dans le graphe \ref{prod} ci-dessous.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{../flowchart/prod.jpg}
+\caption{Processus de fabrication}
+\label{prod}
+\end{figure}
 \subsection{Vente Internet}
-% OK integrer
-\subsection{Vente aux Redistributeurs}
+La vente par internet à été scindée en deux procéssus.
+Le premier tel que détaillé dans le graphe \ref{cmdInternet} traite la commande au niveau du client.
+Il a la possibilité de commander en plusieurs parties, si les stocks ne sont pas disponibles pour traiter la commande complète.
 
+Le deuxième processus détaillé dans le graphe \ref{cmdUsine} concerne le traitement des commandes aux sein de l'entreprise.
+Nous gérons içi aussi le cas de la commande devant être scindée.
+Dû au temps de maturation du produit (environ 1 mois) il nous est impossible de produire à la commande.
+Il est donc possible que dans un premier temps les prévisions de vente ne corréspondent pas à la demande.
+Des statistiques menées au cours de l'activité permetterons d'ajuster la production.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{../flowchart/commandeInternet.jpg}
+\caption{Processus de traitement de commande, côté client}
+\label{cmdInternet}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{../flowchart/commande.jpg}
+\caption{Processus de traitement de commande, côté entreprise}
+\label{cmdUsine}
+\end{figure}
+
+\subsection{Vente aux Redistributeurs}
+La vente aux redistributeurs (processus \ref{redist}) est aussi relativement simple à gérer.
+Nous demandons aux distributeurs des feed-backs sur la vente de nos produits, sur-tout si c'est la première vente qu'ils font pour nous.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{../flowchart/distributeur.jpg}
+\caption{Negotiations avec redistributeurs}
+\label{redist}
+\end{figure}
+
+\clearpage
 \section{Finances}
 \tde{} table sur une production mensuelle moyenne de 100l d'hypocras.
 Ce chiffre est le maximum réalisable par deux personnes et représente pour un produit de niche une bonne quantité de lancement.
